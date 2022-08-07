@@ -9,11 +9,11 @@ Ubuntu version:
 
 * Creation of a new user:
 
-![Create_new_user](Screenshots/new_user.png)
+![Create_new_user](screenshots/new_user.png)
 
 * cat /etc/passwd:
 
-![Create_new_user](Screenshots/cat%3Aetc%3Apasswd.png)
+![Create_new_user](screenshots/cat%3Aetc%3Apasswd.png)
 
 
 ## Part 3. Настройка сети ОС
@@ -23,15 +23,15 @@ Ubuntu version:
 /etc/hostname
 ```
 
-![Change_hostname](Screenshots/change_hostname.png)
+![Change_hostname](screenshots/change_hostname.png)
 
 * Меняем часовой пояс через команду ```timedatectl```
 
-![Zone_location](Screenshots/timedatectl.png)
+![Zone_location](screenshots/timedatectl.png)
 
 * Команда ```ip link show``` поможет вывести названия всех сетевых интерфейсов
 
-![Network_interfaces](Screenshots/network%20interfaces.png)
+![Network_interfaces](screenshots/network%20interfaces.png)
 
 _lo (loopback device) – виртуальный интерфейс, присутствующий по умолчанию в любом Linux. Он используется для отладки сетевых программ и запуска серверных приложений на локальной машине. С этим интерфейсом всегда связан адрес 127.0.0.1. У него есть dns-имя – localhost. Посмотреть привязку можно в файле /etc/hosts._
 
@@ -39,28 +39,28 @@ _lo (loopback device) – виртуальный интерфейс, прису�
 * IP-адрес, получаемый от DHCP:
 
 
-![IP-address from DHCP](Screenshots/ip_address_from_dhcp.png)
+![IP-address from DHCP](screenshots/ip_address_from_dhcp.png)
 
 __DHCP__  _(англ. Dynamic Host Configuration Protocol — протокол динамической настройки узла) — прикладной протокол, позволяющий сетевым устройствам автоматически получать IP-адрес и другие параметры, необходимые для работы в сети TCP/IP._
 
 * Внутренний IP-адрес шлюза, он же IP-адрес по умолчанию:
 
-![IP-address](Screenshots/local_ip-address.png)
+![IP-address](screenshots/local_ip-address.png)
 
 
 * Внешний IP-адрес:
   
-![IP-address](Screenshots/ip-address.png)
+![IP-address](screenshots/ip-address.png)
 
 
 * Статический IP-адрес и DNS назначаем через config-файл ```netplan```
 
-![Static IP](Screenshots/static_IP%2BDNS.png)
+![Static IP](screenshots/static_IP%2BDNS.png)
 
 
 * Пингуется __"ВО"__!
 
-![Ping](Screenshots/ping.png)
+![Ping](screenshots/ping.png)
 
 
 
@@ -68,25 +68,25 @@ __DHCP__  _(англ. Dynamic Host Configuration Protocol — протокол �
 ## Part 4. Обновление ОС
 
 * Через ```apt update ``` обновляем системные пакеты до последней версии:
-![Update](Screenshots/apt_update.png)
+![Update](screenshots/apt_update.png)
 
 
 ## Part 5. Использование команды sudo
 
 * __Sudo__ (англ. Substitute User and do, дословно «подменить пользователя и выполнить») — программа для системного администрирования UNIX-систем, позволяющая делегировать те или иные привилегированные ресурсы пользователям с ведением протокола работы. Основная идея — дать пользователям как можно меньше прав, при этом достаточных для решения поставленных задач. Программа поставляется для большинства UNIX и UNIX-подобных операционных систем.
 
-![Sudo](Screenshots/SUDO.jpeg)
+![Sudo](screenshots/SUDO.jpeg)
 
 * Даем пользователю _em_clone_ права sudo через ```sudo usermod -aG sudo em_clone ```
 и меняем hostname, также редактируя файл ```/etc/hostname```
 
-![Sudo_em_clone_change_hostname](Screenshots/change_host.png)
+![Sudo_em_clone_change_hostname](screenshots/change_host.png)
 
 
 ## Part 6. Установка и настройка службы времени
 
 * Время часового пояса
-![Timedate](Screenshots/data.png)
+![Timedate](screenshots/data.png)
 
 
 ## Part 7. Установка и использование текстовых редакторов
@@ -94,51 +94,51 @@ __DHCP__  _(англ. Dynamic Host Configuration Protocol — протокол �
 * Vim:
 для выхода ```esc и wq```
 
-![Vim](Screenshots/vim_test.png)
+![Vim](screenshots/vim_test.png)
 
 * Nano:
 для выхода ```ctrl + ```, далее ```Y```, чтобы сохранить изменения
 
-![Nano](Screenshots/nano_test.png)
+![Nano](screenshots/nano_test.png)
 
 * Joe:
 для выхода ```ctrl + K```, далее ```X```, чтобы сохранить изменения
 
-![Joe](Screenshots/joe_test.png)
+![Joe](screenshots/joe_test.png)
 
 
 
 * Vim
 для выхода без сохранения ```:q! ```
 
-![Vim](Screenshots/test2_vim.png)
+![Vim](screenshots/test2_vim.png)
 
 * Nano 
 для выхода без сохранения ```ctrl + x ```, далее ```N```
 
 
-![Nano](Screenshots/test_nano2.png)
+![Nano](screenshots/test_nano2.png)
 
 * Joe
 для выхода без сохранения ``` ctrl + c```, далее ```y``` 
 
-![Joe](Screenshots/test2_joe.png)
+![Joe](screenshots/test2_joe.png)
 
 * Vim
 для поиска перейти в режим команд через ```esc``` далее ввести ```/<шаблон_для_поиска>```
 
-![Vim](Screenshots/vim_test_search.png)
+![Vim](screenshots/vim_test_search.png)
 
 для поиска по всему файлу и замены
 ```:%s/<слово_для_замены>/<слово_на_замену>```
 в режиме редактирования
 
-![Vim](Screenshots/vim_test3.png)
+![Vim](screenshots/vim_test3.png)
 
 * Nano
 для поиска ```ctrl+W```
 
-![Nano](Screenshots/nano_test_search.png)
+![Nano](screenshots/nano_test_search.png)
 
 для замены ```ctrl+\``` и ввести в поле строку для поиска и дальше строку для замены
 
@@ -146,13 +146,13 @@ __DHCP__  _(англ. Dynamic Host Configuration Protocol — протокол �
 
 для поиска ```ctrl+K далее F```
 
-![Joe](Screenshots/joe_test_search.png)
+![Joe](screenshots/joe_test_search.png)
 
 для замены выбрать ```R``` - replace и ввести строку для замены и ```Y```для подтверждения
 
-![Joe](Screenshots/joe_test3.png)
+![Joe](screenshots/joe_test3.png)
 
-![Joe](Screenshots/joe_tessst.png)
+![Joe](screenshots/joe_tessst.png)
 
 
 ## Part 8. Установка и базовая настройка сервиса SSHD
@@ -164,20 +164,20 @@ __DHCP__  _(англ. Dynamic Host Configuration Protocol — протокол �
 * Перенастроить службу SSHd на порт 2022: 
 отредактировать конфигурационный файл ```sudo vim /etc/ssh/sshd_config```
 
-![ssh_change_port](Screenshots/ssh_change.png)
+![ssh_change_port](screenshots/ssh_change.png)
 
 * Используя команду ps, показать наличие процесса sshd:
 
 Через командц ```pd``` выводим по номеру процесса запущенный _sshd_ процесс
-![ssh_change_port](Screenshots/ssh_pd.png) 
+![ssh_change_port](screenshots/ssh_pd.png) 
 
 В целом все запущенные процессы можно просмотреть командой pd с флагом ```-e```
 
-![ssh_change_port](Screenshots/ssh_pd-e.png)
+![ssh_change_port](screenshots/ssh_pd-e.png)
 
 * Вывод команды netstat:
 
-![Netstat](Screenshots/statnet.png)
+![Netstat](screenshots/statnet.png)
 
 Можно добавить ключи:
 __-t__ Список активных портов TCP
@@ -208,30 +208,30 @@ __State__ - внутреннее состояние протокола
     * pid процесса, занимающего больше всего процессорного времени 1194 (top)
 
 
-![TOP](Screenshots/top.png)
+![TOP](screenshots/top.png)
 
 * __htop__ сортировка по:
     * PID
-    ![PID](Screenshots/htop_PID.png)
+    ![PID](screenshots/htop_PID.png)
 
     * PERCENT_CPU
-    ![PERCENT_CPU](Screenshots/htop_PERCENT_CPU.png)
+    ![PERCENT_CPU](screenshots/htop_PERCENT_CPU.png)
 
     * PERCENT_MEM
-    ![PERCENT_MEM](Screenshots/htop_PERCENT_MEM.png)
+    ![PERCENT_MEM](screenshots/htop_PERCENT_MEM.png)
 
     * TIME
-    ![TIME](Screenshots/htop_TIME.png)
+    ![TIME](screenshots/htop_TIME.png)
 
 
 * __htop__ фильтр sshd:
-![sshd](Screenshots/sshd_filter.png)
+![sshd](screenshots/sshd_filter.png)
 
 *  __htop__ поиск syslog
-![syslog](Screenshots/htop_sys.png)
+![syslog](screenshots/htop_sys.png)
 
 *  __htop__ вывод доп полей
-![vivod](Screenshots/htop_vivod.png)
+![vivod](screenshots/htop_vivod.png)
 
 ## Part 10. Использование утилиты fdisk
 
@@ -239,7 +239,7 @@ __State__ - внутреннее состояние протокола
 * его размер: 10 GiB
 * количество секторов: 20971520
 * размер swap: 1.7 GiB
-![Swap](Screenshots/swap.png)
+![Swap](screenshots/swap.png)
 
 ## Part 11. Использование утилиты df
 * размер раздела: 9299276
@@ -247,7 +247,7 @@ __State__ - внутреннее состояние протокола
 * размер свободного пространства: 4367620
 * процент использования: 51%
 
-![df](Screenshots/df.png)
+![df](screenshots/df.png)
 
 Определить и написать в отчёт единицу измерения в выводе: 1K-blocks (1024 байт)
 
@@ -258,64 +258,64 @@ __State__ - внутреннее состояние протокола
 * размер свободного пространства: 4.2G
 * процент использования: 51%
 * Определить и написать в отчёт тип файловой системы для раздела: ext4
-![df](Screenshots/dfth.png)
+![df](screenshots/dfth.png)
 
 
 ## Part 12. Использование утилиты du
 
 * Запустить команду du
 
-![du](Screenshots/du.png)
+![du](screenshots/du.png)
 
 * Вывести размер папок 
 /home
-![du](Screenshots/home_du.png)
+![du](screenshots/home_du.png)
 /var
-![du](Screenshots/var_du.png)
+![du](screenshots/var_du.png)
 /var/log 
-![du](Screenshots/du_varlog.png)
+![du](screenshots/du_varlog.png)
  
 
 * Вывести размер всего содержимого в /var/log (не общее, а каждого вложенного элемента, используя *)
 
-![du](Screenshots/varlog2_du.png)
+![du](screenshots/varlog2_du.png)
 
 ## Part 13. Установка и использование утилиты ncdu
 
 * Вывести размер папок 
 /home
-![ncdu](Screenshots/ncdu_home.png)
+![ncdu](screenshots/ncdu_home.png)
 /var
-![ncdu](Screenshots/ncdu_var.png)
+![ncdu](screenshots/ncdu_var.png)
 /var/log 
-![du](Screenshots/ncdu_var_log.png) 
+![du](screenshots/ncdu_var_log.png) 
 
 ## Part 14. Работа с системными журналами
 
 * Написать в отчёте время последней успешной авторизации, имя пользователя и метод входа в систему: 02:47 festusst systemd-logind[650]
 
-![logs](Screenshots/logs.png) 
+![logs](screenshots/logs.png) 
 
 Перезапустить службу SSHd:
-![restart_sshd](Screenshots/restart_sshd.png) 
+![restart_sshd](screenshots/restart_sshd.png) 
 
 
 Вставить в отчёт скрин с сообщением о рестарте службы (искать в логах):
 
-![restart_sshd_logs](Screenshots/restart_in_logs.png) 
+![restart_sshd_logs](screenshots/restart_in_logs.png) 
 
 ## Part 15. Использование планировщика заданий CRON
 
 
 * Найти в системных журналах строчки (минимум две в заданном временном диапазоне) о выполнении:
-![cron](Screenshots/cron_logs.png) 
+![cron](screenshots/cron_logs.png) 
 
 * Вывести на экран список текущих заданий для CRON:
-![Cron](Screenshots/crontab.png) 
+![Cron](screenshots/crontab.png) 
 
 
 Удалите все задания из планировщика заданий.
 В отчёт вставьте скрин со списком текущих заданий для CRON:
 ```crontab -r``` - удалить
 
-![Cron](Screenshots/crontab2.png) 
+![Cron](screenshots/crontab2.png) 
